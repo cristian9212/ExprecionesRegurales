@@ -10,3 +10,7 @@ with open('apache_logs.txt','r') as lines:
            jsonData = {"IP":match.group(1),"Date":match.group(2),"Time":match.group(3),",Method":match.group(4),"Path":match.group(5),"Parameter":match.group(6),"errorCode":match.group(7)}
            jsonExtract.append(jsonData)
         print(json.dumps(jsonExtract,indent=4))
+
+
+        #https://regex101.com/r/VKccht/1
+        #https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/apache_logs/apache_logs
